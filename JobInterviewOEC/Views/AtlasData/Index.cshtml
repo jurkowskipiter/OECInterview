@@ -1,0 +1,192 @@
+﻿@model IEnumerable<JobInterviewOEC.AtlasData>
+
+@{
+    ViewData["Title"] = "OEC";
+}
+
+<h3>Atlas data</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["CenterIdDealerNoAsc"]">
+                    &#8593; &nbsp
+                </a>
+
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["CenterIdDealerNoDesc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.CenterIdDealerNo)
+            </th>
+
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["GrpNameDealerNameDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["GrpNameDealerNameAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.GrpNameDealerName)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DealerNoDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DealerNoAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.DealerNo)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["BillToPartlyDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["BillToPartlyAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.BillToPartly)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["CustomerDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["CustomerAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["LineMakeDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["LineMakeAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.LineMake)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["EndDateDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["EndDateAsc"]">
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["ShipToPartyDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["ShipToPartyAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.ShipToParty)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["LocationId"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["LocationId"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.LocationId)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["AddrPriIdDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["AddrPriIdAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.AddrPriId)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["AddrLineOneDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["AddrLineOneAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.AddrLineOne)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["AddrLineTwoDesc"]">
+                    &#8593; &nbsp
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["AddrLineTwoAsc"]">
+
+                    &#8595; &nbsp
+                </a>
+                @Html.DisplayNameFor(model => model.AddrLineTwo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CenterIdDealerNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GrpNameDealerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DealerNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BillToPartly)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LineMake)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipToParty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocationId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddrPriId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddrLineOne)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddrLineTwo)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(ViewData["PreviousPage"])"
+   class="btn btn-default">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(ViewData["NextPage"])"
+   class="btn btn-default">
+    Next
+</a>
